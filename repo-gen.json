@@ -1,29 +1,5 @@
 {
-"repo_name": "vdr4arch",
-"sign": true,
-"skip_directories": [
-  "plugins/vdr-softhddevice",
-  "plugins/vdr-favorites",
-  "plugins/vdr-channellists",
-  "plugins/vdr-suspendoutput",
-  "plugins/vdr-upnp",
-  "plugins/vdr-neutrinoepg",
-  "plugins/vdr-radio",
-  "plugins/vdr-ddci2",
-  "plugins/vdr-chanman",
-  "plugins/vdr-remotetimers",
-  "plugins/vdr-zaphistory",
-  "plugins/vdr-duplicates",
-  "plugins/vdr-peer",
-  "plugins/vdr-loadepg",
-  "plugins/vdr-skinenigmang",
-  "plugins/vdr-skinpearlhd",
-  "plugins/vdr-hddarchive",
-  "plugins/vdr-tvscraper",
-  "plugins/vdr-vompserver",
-  "plugins/vdr-noepg",
-  "plugins/vdr-epgfixer",
-  "plugins/vdr-text2skin",
-  "deps/udisks"
-]
+  "repo_name": "alter-stable",
+  "sign": true,
+  "skip_directories": []
 }

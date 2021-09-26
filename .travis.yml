@@ -25,16 +25,14 @@ env:
 jobs:
   - env: REPO_MAKE_ARCH=x86_64 REPO_MAKE_MAKEPKG_CONF=./.ci/makepkg.conf
     arch: amd64
-  - env: REPO_MAKE_ARCH=armv6h REPO_MAKE_MAKEPKG_CONF=./.ci/makepkg-armv6h.conf
-    arch: arm64
-  - env: REPO_MAKE_ARCH=armv7h REPO_MAKE_MAKEPKG_CONF=./.ci/makepkg-armv7h.conf
-    arch: arm64
+  - env: REPO_MAKE_ARCH=i686 REPO_MAKE_MAKEPKG_CONF=./.ci/makepkg-i686.conf
+    arch: i686
 
 before_script:
   - ./.ci/setup_arm_build.sh
   - sudo locale-gen en_US.UTF-8
   - sudo update-locale LANG=en_US.UTF-8
-  - git clone https://github.com/VDR4Arch/$REPO_MAKE_ARCH.git --branch master --single-branch $HOME/repo || true
+  - git clone https://github.com/FascodeNet/alterlinux-repo-$REPO_MAKE_ARCH.git --branch master --single-branch $HOME/repo || true
   - rm -rf $HOME/repo/.git
 
 script:
@@ -49,7 +47,7 @@ deploy:
   token: $GITHUB_TOKEN
   skip_cleanup: true
   local_dir: $HOME/repo/
-  repo: VDR4Arch/$REPO_MAKE_ARCH
+  repo: FascodeNet/alterlinux-repo-$REPO_MAKE_ARCH
   target_branch: master
   on:
     repo: $TRAVIS_REPO_SLUG

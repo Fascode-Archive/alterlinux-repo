@@ -1,5 +1,0 @@
-post_remove() {
-  echo "==> Optionally remove /var/lib/kodi/"
-}
-
-# vim:set ts=2 sw=2 et:

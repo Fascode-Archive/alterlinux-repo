@@ -1,9 +1,0 @@
-post_install() {
-cat << 'EOM'
-  ==> All configuration is maintained through the web interface:
-  ==>
-  ==> http://localhost:9981/
-  ==>
-  ==> Default login without username/password.
-EOM
-}
